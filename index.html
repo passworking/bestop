@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/cssflipclock.css">
+
+    <style>
+        h1.micolor {color: red;
+        }
+        h1:hover{color:red;}
+        a:hover{background-color:violet;}
+        h2:active{color:blue;}
+        input:focus{background-color:green;}
+        h3 {font-size: 29px;font-family:monospace;font-style: oblique;font-weight: 900;}
+        table.tejercicio td,th {
+            border: 1px solid black;
+            font-weight: bold;
+        }
+        #table {
+            border-collapse: collapse;
+        }
+        #n5{ background-color: orangered;
+            font-weight: bold;
+        }
+        #c1{ background-color: rgb(255, 191, 17);
+            font-weight: bold;
+        }
+        #c2{ background-color: aqua;
+            font-weight: bold;
+        }
+        .borde-gris {
+            border: 1px solid #ccc;
+        }
+        #myCanvas {
+            width: 400px;
+            height: 300px;
+            background-color:black;
+        }
+        </style>
+        
+
+    <meta charset=”UTF-8”>
+
+<script>
+    var crearContexto2d = function(lienzo) {
+    if(!lienzo) return null;
+    if(!lienzo.getContext) return null;
+    return lienzo.getContext('2d');
+    }
+    var pintarRectangulo = function(contexto2d) {
+    if(!contexto2d) return;
+    contexto2d.fillStyle = 'rgb(200,0,0)';
+    contexto2d.fillRect(10, 10, 100, 100);
+    }
+    window.onload = function() {
+    var lienzo = document.getElementById('lienzo1');
+    var contexto2d = crearContexto2d(lienzo1);
+    pintarRectangulo(contexto2d);
+    }
+    </script>
+
+<title>Insert title here</title>
+</head>
+<body>
+    <h1 style="color:blue"; title="esto es una prueba de globo informativo">This is a Heading, the body starts here, a "h1" mark</h1>
+    <p>This is a paragraph, a "p" mark.</p> <!--es un comentario-->
+
+    <h1>título 1</h1>
+    <h2>título 2</h2>
+    <h3>título 3</h3>
+    <h4>título 4</h4>
+    <h5>título 5</h5>
+    <h6>título 6</h6>
+
+    <ol>
+        <li>esto esta dentro de la etiqueta ol que define una lista y cada elementot</li> 
+        <li>es un li dentro del listado</li>
+        </ol>
+    <p>
+        Esto es un parrafo
+    </p>
+
+    <table>
+        <thead>
+        <tr> <!--fila cabecera-->
+        <th>celda cabecera 1</th>
+        <th>celda cabecera 2</th>
+        <th>celda cabecera 3</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr> <!--fila 1 del cuerpo o celdas-->
+        <td>valor 1 fila 1</td>
+        <td>valor 2 fila 1</td>
+        <td>valor 3 fila 1</td>
+        </tr>
+        <tr>
+        <td colspan="2">valor 4</td>
+        <td>valor 5</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <table><caption>leyenda de tabla</caption>
+            <tr>
+            <td>valor 1</td>
+            <td>valor 2</td>
+            <td>valor 3</td>
+            </tr>
+            <tr>
+            <td>valor 4</td>
+            <td>valor 5</td>
+            <td>valor 6</td>
+             </tr> 
+             </table>
+
+        <a href="google.com">enlace a google</a>
+        </br>
+        <a href="google.com" target="_self">enlace a google, se abre en misma ventana porque usè el atributo _self</a>
+        </br>
+        <a href="google.com" target="_parent">enlace a google, se abre en otra ventana porque usè el atributo _blank</a>
+
+        <h1>insertamos una imagen:</h1>
+    <img alt="photo of Nikola Tesla" src="C:\Users\parse\Pictures\nikola369.jpeg" height="384" width="256">
+    </img>
+    <div style="color: red;">esto es un div o bloque en rojo</div>
+
+    <p>dentro de este texto resaltamos lo que es 
+        <span style="color:red;">importante</span>, para ello usamos la etiqueta span</p>
+    <hr> <!-- es una linea que separa visualmente el contenido-->
+
+    <h1>EJERCICIO</h1>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="10">"Números del 1 al 100"</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Ej: listado usando etiquetas select y option, esta ultima con su atributo  value y 1 opcion con disable</h1>
+    <select>
+        <option value=”dolar”>$</option>
+        <option value=”libra”>£</option>
+        <option value=”euro”>€</option>
+        <option value=”yen” disabled>¥</option>
+        </select>
+        nombre: <input type=”text” />
+
+        <h2>radio</h2>
+        <div>selecciones una de las siguientes opciones:</div>
+        <div><input type="radio" name="opcion" value="valor 1" />opción 1</div>
+        <div><input type="radio" name="opcion" value="valor 2" />opción 2</div>
+        <div><input type="radio" name="opcion" value="valor 3" />opción 3</div>
+        <h2>EJERCICIO: formulario de control</h2>
+        <form action="https://127.0.0.1/login_usuario">
+            <div>
+            nombre_usuario: <input type="text"/>
+            </div>
+            <div>
+            password: <input type="password"/>
+            </div>
+            <div>
+            <input type="submit" value="Submit">
+
+        </form>            
+        
+            <h1 class="micolor">esto es un título, usa el atributo class
+                 para ccs interno, cuyo estilo se definio en head</h1>
+    
+        <p title="esto es un ejemplo de lo que se puede hacer, 
+        es un ejemplo de renglon con definiciones de cualquier tipo para probar 
+        algo que se puede realizar o no visualmeente bueno, depende de varios valores.esto es un ejemplo de lo que se puede hacer, 
+        es un ejemplo de renglon con definiciones de cualquier tipo para probar 
+            algo que se puede realizar o no visualmeente bueno, depende de varios valores esto es un ejemplo de lo que se puede hacer, 
+            es un ejemplo de renglon con definiciones de cualquier tipo para probar 
+                algo que se puede realizar o no visualmeente bueno, depende de varios valoreesto es un ejemplo de lo que se puede hacer, 
+                es un ejemplo de renglon con definiciones de cualquier tipo para probar 
+                    algo que se puede realizar o no visualmeente bueno, depende de varios valores esto es un ejemplo de lo que se puede hacer, 
+                    es un ejemplo de renglon con definiciones de cualquier tipo xxxx xxxxxxxxxxxxxxxxxxx">esto es un ejemplo de lo que se puede hacer, 
+            es un ejemplo de renglon <p>con definiciones de cualquier tipo para probar 
+                algo que se puede realizar o no visualmeente bueno, depende de varios valores esto es un ejemplo de lo que se puede hacer, 
+                es un ejemplo de renglon con definiciones de cualquier tipo para probar 
+                    algo que se puede realizar o no visualmeente bueno, depende de varios valore</p> </p>
+
+        <h1>titulo modificado por hover, ccs interno</h1>
+        <a href="https://www.w3schools.com">Hover aplicado sobre link, etiqueta a </a>
+
+        <h2>titulo modificado por active, ccs interno</h2>
+        <form>
+        Ejemplo de focus: <input type="text">
+        </form>
+
+        <h3>Ejemplo propiedad front-size, puede ser small, medium, large, % o px, en este caso, 20px</h3>
+
+        <h1>Ejercicio, tabla</h1>
+        <table class="tejercicio" id="table">
+            <thead>
+                <tr>
+                    <th id="n5">Marca</th>
+                    <th id="n5">Modelo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="c1">Audi</td>
+                    <td id="c1">A3</td>
+                </tr>
+                <tr>
+                    <td id="c2">Audi</td>
+                    <td id="c2">A8</td>
+                </tr>
+                <tr>
+                    <td id="c1">Ford</td>
+                    <td id="c1">Fiesta</td>
+                </tr>
+                <tr>
+                    <td id="c2">Peugeot</td>
+                    <td id="c2">306</td>
+                </tr>
+                <tr>
+                    <td id="c1">Peugeot</td>
+                    <td id="c1">1008</td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="n5">Listado de coches</td>
+                </tr>
+            </tbody>
+        </table>
+        <form>       
+        elige un valor del 1 al 10: <input type="range" min="1" max="10" />
+        <input type="text" name="nombre" placeholder="nombre" />
+        <input type="text" name="apellidos" placeholder="apellidos" />
+        </form>
+        <h2>Aquí debiera estar el canvas</h2>
+        <canvas id="lienzo1" width="300" height="200"></canvas>
+        
+        <div class="my-clock"></div>
+        <script src="/js/jquery/jquery.js"></script>
+        <script src="/js/flipclock/flipclock.min.js"></script>
+        <script>
+        var clock = new FlipClock($(" .my-clock"), {});
+        </script>
+        <h1>
+            EJERCICIO FORM REGISTRO REGISTRO
+        </h1>
+        <form>
+            <input type="text" id="nombre">
+            <label for="nombre">nombre usuario</label></br>
+            <input type="text" id="apellidos">
+            <label for="apellidos">apellidos</label></br>
+            <input type="password" id="password">
+            <label for="password">password</label></br>
+            <select id="sexo">
+                <label for="sexo">sexo</label></br>
+                <option value="mujer">M</option>
+                <option value="HOMBRE">H</option>
+            </select> 
+            <input type="date" id="fecha nacimiento">
+            <label for="fecha nacimiento">fecha nacimiento</label></br>
+            <input type="color" id="color">
+            <label for="color">color</label></br>
+        </form>
+                
+</body>
+</html>
